@@ -69,9 +69,9 @@ def main():
     #             "https://www.youtube.com/watch?v=NtM3jjLP7AE", 
     #             "https://www.youtube.com/watch?v=aD3HgrfjrAw"]
 
-    sleepy = ["paperplanes..mp3"]
-    chill  = ["paperplanes..mp3"]
-    energetic = ["paperplanes..mp3"]
+    sleepy = ["paperplanes.mp3"]
+    chill  = ["paperplanes.mp3"]
+    energetic = ["paperplanes.mp3"]
 
     #Server Info
     HOST = "172.20.10.3"
