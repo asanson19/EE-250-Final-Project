@@ -10,7 +10,7 @@ def get_audio(url):
     play_url = best.url
 
     # return play_url
-    return url
+    return best.url
 
 def get_brightness():
     #light sensor code
