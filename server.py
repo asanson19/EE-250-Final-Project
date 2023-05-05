@@ -77,7 +77,7 @@ def main():
         s.listen()
         conn, addr = s.accept()
         with conn:
-            print(f"Connected by {addr}")
+            print("Connected by", addr)
             while True:
                 brightness = get_brightness()
                 if brightness == "Dark":
