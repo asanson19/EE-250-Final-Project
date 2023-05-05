@@ -12,7 +12,7 @@ def get_audio(url):
     return play_url
 
 def get_brightness():
-    #TODO: light sensor code
+    #light sensor code
     light_input = 0
 
     grovepi.pinMode(light_input, "INPUT")
