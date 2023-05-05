@@ -38,7 +38,7 @@ def main():
         s.connect((HOST, PORT))
         while True:
             url = s.recv(1024)
-            play_song(url.encode())
+            play_song(url)
 
 if __name__ == '__main__':
     main()
