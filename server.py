@@ -86,7 +86,7 @@ def main():
                     url = random.choice(chill)
                 else:
                     url = random.choice(energetic)
-                conn.sendall(url)
+                conn.sendall(url.encode())
                 time.sleep(0.5)
 
 if __name__ == '__main__':
