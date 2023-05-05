@@ -34,10 +34,10 @@ def main():
     HOST = "172.20.10.3"
     PORT = 1024
 
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.connect((HOST, PORT))
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.bind((HOST, PORT))
         while True:
-            url = s.recv(1024)
+            url = s.recvfrom(1024)
             play_song(url.decode())
 
 if __name__ == '__main__':

@@ -77,23 +77,19 @@ def main():
     HOST = "172.20.10.3"
     PORT = 1024
 
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
         s.bind((HOST, PORT))
-        s.listen()
-        conn, addr = s.accept()
-        with conn:
-            print("Connected by", addr)
-            while True:
-                url = ""
-                brightness = get_brightness()
-                if brightness == "Dark":
-                    url = random.choice(sleepy)
-                elif brightness == "Mid" and not is_morning():
-                    url = random.choice(chill)
-                else:
-                    url = random.choice(energetic)
-                conn.sendall(url.encode())
-                time.sleep(0.5)
+        while True:
+            url = ""
+            brightness = get_brightness()
+            if brightness == "Dark":
+                url = random.choice(sleepy)
+            elif brightness == "Mid" and not is_morning():
+                url = random.choice(chill)
+            else:
+                url = random.choice(energetic)
+            s.sendto(url.encode(), (HOST, PORT))
+            time.sleep(0.5)
 
 if __name__ == '__main__':
     main()
