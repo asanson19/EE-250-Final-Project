@@ -1,4 +1,5 @@
-import datetime as dt, random
+from datetime import datetime as dt
+import random
 import time, grovepi
 from time import mktime
 import pafy
