@@ -50,26 +50,30 @@ def main():
     # YouTube URL Arrays
 
     # Dark
-    sleepy = ["https://www.youtube.com/watch?v=6EP4vlyYCko", 
-            "https://www.youtube.com/watch?v=yjBbOn-g5bw",
-            "https://www.youtube.com/watch?v=fp24dGKx678",
-            "https://www.youtube.com/watch?v=qMuc20T4AC8",
-            "https://www.youtube.com/watch?v=Nv3bQao8l3I"]
-    # Mid & NOT Morning
-    chill = ["https://www.youtube.com/watch?v=ic8j13piAhQ", 
-            "https://www.youtube.com/watch?v=aSJ86cRB7zQ", 
-            "https://www.youtube.com/watch?v=ke6xTSjnjBs", 
-            "https://www.youtube.com/watch?v=X2Qz9W76m98", 
-            "https://www.youtube.com/watch?v=QfEYyw7C2dE"]
+    # sleepy = ["https://www.youtube.com/watch?v=6EP4vlyYCko", 
+    #         "https://www.youtube.com/watch?v=yjBbOn-g5bw",
+    #         "https://www.youtube.com/watch?v=fp24dGKx678",
+    #         "https://www.youtube.com/watch?v=qMuc20T4AC8",
+    #         "https://www.youtube.com/watch?v=Nv3bQao8l3I"]
+    # # Mid & NOT Morning
+    # chill = ["https://www.youtube.com/watch?v=ic8j13piAhQ", 
+    #         "https://www.youtube.com/watch?v=aSJ86cRB7zQ", 
+    #         "https://www.youtube.com/watch?v=ke6xTSjnjBs", 
+    #         "https://www.youtube.com/watch?v=X2Qz9W76m98", 
+    #         "https://www.youtube.com/watch?v=QfEYyw7C2dE"]
 
-    # Mid & Morning || Bright
-    energetic = ["https://www.youtube.com/watch?v=fp24dGKx678", 
-                "https://www.youtube.com/watch?v=Q_fmW9RPCqM", 
-                "https://www.youtube.com/watch?v=3BFTio5296w", 
-                "https://www.youtube.com/watch?v=NtM3jjLP7AE", 
-                "https://www.youtube.com/watch?v=aD3HgrfjrAw"]
+    # # Mid & Morning || Bright
+    # energetic = ["https://www.youtube.com/watch?v=fp24dGKx678", 
+    #             "https://www.youtube.com/watch?v=Q_fmW9RPCqM", 
+    #             "https://www.youtube.com/watch?v=3BFTio5296w", 
+    #             "https://www.youtube.com/watch?v=NtM3jjLP7AE", 
+    #             "https://www.youtube.com/watch?v=aD3HgrfjrAw"]
 
-    #TODO: Server Info
+    sleepy = ["paperplanes..mp3"]
+    chill  = ["paperplanes..mp3"]
+    energetic = ["paperplanes..mp3"]
+
+    #Server Info
     HOST = "172.20.10.3"
     PORT = 1024
 
