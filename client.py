@@ -39,3 +39,6 @@ def main():
         while True:
             url = s.recv(1024)
             play_song(url)
+
+if __name__ == '__main__':
+    main()
