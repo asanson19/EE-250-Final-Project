@@ -84,6 +84,7 @@ def main():
         with conn:
             print("Connected by", addr)
             while True:
+                url = ""
                 brightness = get_brightness()
                 if brightness == "Dark":
                     url = random.choice(sleepy)
