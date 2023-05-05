@@ -34,7 +34,7 @@ def main():
     HOST = "172.20.10.3"
     PORT = 1024
 
-    with socket.socket(socket.AD_INET, socket.SOCK_STREAM) as s:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
         while True:
             url = s.recv(1024)
