@@ -70,23 +70,24 @@ def main():
 
     #TODO: Server Info
     HOST = "172.20.10.3"
-    PORT = 1000
+    PORT = 1024
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind((HOST, PORT))
         s.listen()
         conn, addr = s.accept()
-
-    while True:
-        brightness = get_brightness()
-        if brightness == "Dark":
-            url = random.choice(sleepy)
-        elif brightness == "Mid" and not is_morning():
-            url = random.choice(chill)
-        else:
-            url = random.choice(energetic)
-        conn.sendall(url)
-        time.sleep(0.5)
+        with conn:
+            print(f"Connected by {adrr}")
+            while True:
+                brightness = get_brightness()
+                if brightness == "Dark":
+                    url = random.choice(sleepy)
+                elif brightness == "Mid" and not is_morning():
+                    url = random.choice(chill)
+                else:
+                    url = random.choice(energetic)
+                conn.sendall(url)
+                time.sleep(0.5)
 
 if __name__ == '__main__':
     main()

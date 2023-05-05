@@ -32,7 +32,7 @@ def play_song(url):
 
 def main():
     HOST = "172.20.10.3"
-    PORT = 1000
+    PORT = 1024
 
     with socket.socket(socket.AD_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
