@@ -31,10 +31,11 @@ def play_song(url):
     player.stop()
 
 def main():
-    HOST = socket.gethostname()
+    HOST = "172.20.10.3"
     PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.sendto("Connected".encode(), (HOST, PORT))
         while True:
             url = s.recvfrom(1024)
             play_song(url.decode())
