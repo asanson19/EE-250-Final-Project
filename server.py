@@ -36,8 +36,8 @@ def get_brightness():
 def is_morning():
     ts = dt.now().time()
 
-    mornStart = dt.time(6,0)
-    mornEnd = dt.time(12,0)
+    mornStart = time(6,0)
+    mornEnd = time(12,0)
     if ts >= mornStart and ts <= mornEnd:
         return True
     else:
