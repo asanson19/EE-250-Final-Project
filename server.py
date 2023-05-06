@@ -1,4 +1,5 @@
 import datetime as dt
+from datetime import datetime
 import random
 import time, grovepi
 import pafy
@@ -33,7 +34,7 @@ def get_brightness():
     return brightness
 
 def is_morning():
-    ts = dt.now().time()
+    ts = dt.datetime.now()
 
     mornStart = dt.time(6,0)
     mornEnd = dt.time(12,0)
