@@ -1,7 +1,6 @@
-from datetime import datetime as dt, time
+import datetime as dt
 import random
 import time, grovepi
-from time import mktime
 import pafy
 import socket
 
@@ -36,8 +35,8 @@ def get_brightness():
 def is_morning():
     ts = dt.now().time()
 
-    mornStart = time(6,0)
-    mornEnd = time(12,0)
+    mornStart = dt.time(6,0)
+    mornEnd = dt.time(12,0)
     if ts >= mornStart and ts <= mornEnd:
         return True
     else:
