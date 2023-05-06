@@ -76,7 +76,7 @@ def main():
     PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-        s.bind(("192.168.56.1", PORT))
+        s.bind((HOST, PORT))
         buff = s.recvfrom(1024)
         while True:
             url = ""

@@ -35,7 +35,7 @@ def main():
     PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-        s.sendto("Connected".encode(), (HOST, PORT))
+        s.bind(("172.20.10.2", PORT))
         while True:
             url = s.recvfrom(1024)
             play_song(url.decode())
