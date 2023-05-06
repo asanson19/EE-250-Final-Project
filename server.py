@@ -87,7 +87,8 @@ def main():
                 url = random.choice(chill)
             else:
                 url = random.choice(energetic)
-            s.sendto(url.encode(), ("172.20.10.2", PORT))
+            
+            url = s.recvfrom(1024)
             time.sleep(0.5)
 
 if __name__ == '__main__':
