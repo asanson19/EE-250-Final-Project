@@ -35,7 +35,6 @@ def main():
     PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-        s.bind((HOST,PORT))
         try:
             s.bind((HOST, PORT))
         except socket.error as e:
