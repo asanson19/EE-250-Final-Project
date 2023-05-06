@@ -35,12 +35,6 @@ def main():
     PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-        try:
-            s.bind((HOST, PORT))
-        except socket.error as e:
-            print(f"Error: {e}")
-            return
-
         while True:
             url = s.recvfrom(1024)
             play_song(url.decode())
