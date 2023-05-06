@@ -77,6 +77,7 @@ def main():
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind((HOST, PORT))
+    print("UDP server up and listening")
     while True:
             url = ""
             brightness = get_brightness()
