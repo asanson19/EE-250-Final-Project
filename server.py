@@ -73,7 +73,7 @@ def main():
 
     #Server Info
     HOST = "172.20.10.3"
-    PORT = 1024
+    PORT = 1009
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
         while True:
