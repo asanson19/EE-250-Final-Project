@@ -75,9 +75,9 @@ def main():
     HOST = "172.20.10.3"
     PORT = 1050
 
-    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-        s.bind((HOST, PORT))
-        while True:
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.bind((HOST, PORT))
+    while True:
             url = ""
             brightness = get_brightness()
             if brightness == "Dark":
