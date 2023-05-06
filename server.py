@@ -1,4 +1,4 @@
-from datetime import datetime as dt
+from datetime import datetime as dt, time
 import random
 import time, grovepi
 from time import mktime
