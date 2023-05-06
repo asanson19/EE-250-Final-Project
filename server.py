@@ -34,10 +34,7 @@ def get_brightness():
     return brightness
 
 def is_morning():
-    dt_str = "31OCT2020231032"
-    time_obj = dt.strptime(dt_str, "%d%b%Y%H%M%S")
-    str_time = time_obj.time()
-    ts  = dt.fromtimestamp(mktime(str_time))
+    ts = dt.now().time()
 
     mornStart = dt.time(6,0)
     mornEnd = dt.time(12,0)
