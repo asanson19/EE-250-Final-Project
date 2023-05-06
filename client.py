@@ -35,6 +35,7 @@ def main():
     PORT = 1024
 
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.bind((HOST, PORT))
         while True:
             url = s.recvfrom(1024)
             play_song(url.decode())
