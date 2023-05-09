@@ -18,7 +18,7 @@ def get_brightness():
 
     #light thresholds
     lower = 80
-    upper = 200
+    upper = 250
 
     grovepi.pinMode(light_input, "INPUT")
 
