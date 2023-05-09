@@ -88,8 +88,8 @@ def main():
                 file = random.choice(chill)
             else:
                 file = random.choice(energetic)
-                conn.sendall(file.encode())
-                time.sleep(0.5)
+            conn.sendall(file.encode())
+            time.sleep(0.5)
 
 if __name__ == '__main__':
     main()
