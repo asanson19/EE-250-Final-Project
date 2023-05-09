@@ -34,10 +34,11 @@ def main():
     HOST = "172.20.10.3"
     PORT = 1050
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    while True:
-            s.sendto(url.encode(), ("172.20.10.2", PORT))
-            play_song(url.decode())
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        s.connect((HOST, PORT))
+        while True:
+                play_song(url.decode())
+                url = s.recv(1024)
 
 if __name__ == '__main__':
     main()
