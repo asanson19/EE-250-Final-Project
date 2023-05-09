@@ -56,11 +56,8 @@ def main():
             # Receive and process server message to get file name
             data = s.recv(1024)
             data = data.decode()
-            print(data)
             data = data.split(".")
-            print(data)
             url = data[-3] + ".mp3"
-            print(url)
             play_song(url)
 
 if __name__ == '__main__':

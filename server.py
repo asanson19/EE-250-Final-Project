@@ -18,7 +18,7 @@ def get_brightness():
 
     #light thresholds
     lower = 50
-    upper = 200
+    upper = 175
 
     grovepi.pinMode(light_input, "INPUT")
 
@@ -62,7 +62,7 @@ def main():
 
     sleepy = ["paperplanes.mp3.", "WelcometoWonderland.mp3.", "Halcyon.mp3.", "DosOruguitas.mp3.", "Nothing.mp3."]
     chill  = ["CruelSummer.mp3.", "Papercuts.mp3.", "CrashCourse.mp3.", "wemadeit.mp3.", "SummerNights.mp3."]
-    energetic = ["StillIntoYou.mp3.", "NeverGonnaGiveYouUp.mp3.", "WeBuiltThisCity.mp3.", "VIRGOSGROOVE.mp3."]
+    energetic = ["StillIntoYou.mp3.", "NeverGonnaGiveYouUp.mp3.", "WeBuiltThisCity.mp3.", "VIRGOSGROOVE.mp3.", "PrincessDiana.mp3."]
 
     #Server Info
     HOST = "172.20.10.3"
