@@ -66,7 +66,7 @@ def main():
 
     #Server Info
     HOST = "172.20.10.3"
-    PORT = 1051
+    PORT = 1050
 
     #Create TCP server
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
