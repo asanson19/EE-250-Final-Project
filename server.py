@@ -66,9 +66,13 @@ def main():
 
     #Create TCP server
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        print("Socket created")
         s.bind((HOST, PORT))
+        print("Server binded")
         s.listen()
+        print("Listening for client...")
         conn, addr = s.accept()
+        print("Client accepted")
         while True:
                 file = ""
 
@@ -80,7 +84,7 @@ def main():
                     file = random.choice(chill)
                 else:
                     file = random.choice(energetic)
-                conn.sendall(file)
+                conn.sendall(file.encode())
                 time.sleep(0.5)
 
 if __name__ == '__main__':

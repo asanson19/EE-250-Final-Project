@@ -48,14 +48,19 @@ def main():
     PORT = 1050
 
     # TCP server
-    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        print("Socket created")
         s.connect((HOST, PORT))
+        print("Server connected")
         while True:
-                # Receive and process server message to get file name
-                data = s.recv(1024)
-                data = data.split(".")
-                url = data[-2] + ".mp3"
-                play_song(url.decode())
+            # Receive and process server message to get file name
+            data = s.recv(1024)
+            print(data)
+            data = data.split(".")
+            print(data)
+            url = data[-2] + ".mp3"
+            print(url)
+            play_song(url.decode())
 
 if __name__ == '__main__':
     main()
