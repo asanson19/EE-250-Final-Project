@@ -16,16 +16,20 @@ def get_brightness():
     #light sensor input port
     light_input = 0
 
+    #light thresholds
+    lower = 50
+    upper = 200
+
     grovepi.pinMode(light_input, "INPUT")
 
     #capture value
     input_value = grovepi.analogRead(light_input)
 
     #assigns light level
-    if input_value < 50:
+    if input_value < lower:
         brightness = "Dark"
 
-    elif input_value in range(50, 300):
+    elif input_value in range(lower, upper):
         brightness = "Mid"
 
     else:
@@ -58,7 +62,7 @@ def main():
 
     sleepy = ["paperplanes.mp3.", "WelcometoWonderland.mp3.", "Halcyon.mp3.", "DosOruguitas.mp3.", "Nothing.mp3."]
     chill  = ["CruelSummer.mp3.", "Papercuts.mp3.", "CrashCourse.mp3.", "wemadeit.mp3.", "SummerNights.mp3."]
-    energetic = ["Halcyon.mp3.", "StillIntoYou.mp3.", "NeverGonnaGiveYouUp.mp3.", "WeBuiltThisCity.mp3.", "VIRGOSGROOVE.mp3."]
+    energetic = ["StillIntoYou.mp3.", "NeverGonnaGiveYouUp.mp3.", "WeBuiltThisCity.mp3.", "VIRGOSGROOVE.mp3."]
 
     #Server Info
     HOST = "172.20.10.3"
@@ -74,16 +78,16 @@ def main():
         conn, addr = s.accept()
         print("Client accepted")
         while True:
-                file = ""
+            file = ""
 
-                # Generate random file name based on light level and time
-                brightness = get_brightness()
-                if brightness == "Dark":
-                    file = random.choice(sleepy)
-                elif brightness == "Mid" and not morning():
-                    file = random.choice(chill)
-                else:
-                    file = random.choice(energetic)
+            # Generate random file name based on light level and time
+            brightness = get_brightness()
+            if brightness == "Dark":
+                file = random.choice(sleepy)
+            elif brightness == "Mid" and not morning():
+                file = random.choice(chill)
+            else:
+                file = random.choice(energetic)
                 conn.sendall(file.encode())
                 time.sleep(0.5)
 

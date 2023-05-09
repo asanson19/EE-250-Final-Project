@@ -59,7 +59,7 @@ def main():
             print(data)
             data = data.split(".")
             print(data)
-            url = data[-2] + ".mp3"
+            url = data[-3] + ".mp3"
             print(url)
             play_song(url)
 
