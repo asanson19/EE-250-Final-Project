@@ -37,8 +37,10 @@ def main():
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
         s.connect((HOST, PORT))
         while True:
+                data = s.recv(1024)
+                data = data.split(".")
+                url = data[0] + ".mp3"
                 play_song(url.decode())
-                url = s.recv(1024)
 
 if __name__ == '__main__':
     main()
